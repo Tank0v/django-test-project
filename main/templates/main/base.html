@@ -10,7 +10,6 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <!-- Ссылка на главную страницу -->
         <a class="navbar-brand" href="{% url 'main:product_list' %}">Shop</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -18,13 +17,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <!-- Ссылка на главную страницу -->
                     <a class="nav-link" href="{% url 'main:product_list' %}">Все товары</a>
 
                 </li>
                 {% for category in categories %}
                 <li class="nav-item">
-                    <!-- Ссылка на каждую категорию -->
                     <a class="nav-link" href="{{ category.get_absolute_url }}">
                         {{ category.name }}
                     </a>
@@ -59,7 +56,7 @@
         <div class="row">
             <div class="col-md-4">
                 <h5>Магазин</h5>
-                <p>Информация о магазине</p>
+                <p>Информация об этом магазине магазине</p>
             </div>
             <div class="col-md-4">
                 <h5>Контакты</h5>
