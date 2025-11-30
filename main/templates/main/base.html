@@ -16,7 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <!-- Ссылочка на главную страницу -->
+        <!-- Ссылка на главную страницу -->
         <a class="navbar-brand" href="{% url 'main:product_list' %}">Shop</a>
         <button
           class="navbar-toggler"
@@ -29,12 +29,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
+              <!-- Ссылка на главную страницу -->
               <a class="nav-link" href="{% url 'main:product_list' %}"
                 >Все товары</a
               >
             </li>
             {% for category in categories %}
             <li class="nav-item">
+              <!-- Ссылка на каждую категорию -->
               <a class="nav-link" href="{{ category.get_absolute_url }}">
                 {{ category.name }}
               </a>
